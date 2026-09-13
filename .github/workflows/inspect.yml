@@ -1,0 +1,20 @@
+name: inspect
+
+on: push
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: runner details
+        run: |
+          uname -a
+          echo "list of files"
+          find . -type f
+
+      - name: repo file count
+        run: find . -type f | wc -l
