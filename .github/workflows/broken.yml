@@ -9,8 +9,8 @@ jobs:
       - name: Read the readme
         run: cat README.md
       - name: Install python
-         uses: actions/setup-python@v5
-         with:
+        uses: actions/setup-python@v5
+        with:
            python-version: '3.12'
       - name: Show the Python version
         run: pyhton3 --version
