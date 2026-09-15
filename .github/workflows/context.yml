@@ -1,0 +1,12 @@
+name: context
+on: push
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  context info
+        run: |
+          echo "Repository: ${{github.repository}}"
+          echo "Branch: ${{github.ref_name}}"
+          echo "CommitId: ${{github.sha}}"
+          echo "OS: ${{runner.os}}
