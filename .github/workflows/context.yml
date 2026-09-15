@@ -9,4 +9,4 @@ jobs:
           echo "Repository: ${{github.repository}}"
           echo "Branch: ${{github.ref_name}}"
           echo "CommitId: ${{github.sha}}"
-          echo "OS: ${{runner.os}}
+          echo "OS: ${{runner.os}}"
