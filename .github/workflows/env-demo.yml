@@ -1,0 +1,17 @@
+name : environment variable
+on:
+  push:
+env:
+  APP_NAME: journey
+jobs:
+  environment:
+    runs-on: ubuntu-latest
+    env:
+      LOG_LEVEL: info
+    steps:
+      - name: print job level log
+        run: echo "$APP_NAME with $LOG_LEVEL"
+      - name: print step level log
+        env:
+          LOG_LEVEL: debug
+        run: echo "$APP_NAME with $LOG_LEVEL"
